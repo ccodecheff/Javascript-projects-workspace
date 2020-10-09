@@ -1,5 +1,9 @@
 // Practising Javascript Objects
 
+/* Javascript object garbage collection => object  reachabilty
+if we have multiple interlinked object we just need to set the root obj to null; 
+*/
+
 // Program 1 to check if an object if empty or not 
 
 function isempty(obj){
@@ -29,8 +33,9 @@ function myFunction(item) {
 
 
 // deleting a function
-delete obj1.id;
-console.log(obj1);
+let obj3={id:1};
+delete obj3.id;
+console.log(obj3);
 
 // Note two objects are treated independently even if they are empty
 let a = {};
@@ -152,12 +157,12 @@ function Calculator(){
     name: "karan",
     num: 1000,
   
-    // for hint="string"
+    // Automatically trigger if oject is "default"
     toString() {
       return `{name: "${this.name}"}`;
     },
   
-    // for hint="number" or "default"
+    // Automatically trigger if oject is "number" 
     valueOf() { // return an object
       return this.num;
     }
@@ -165,5 +170,6 @@ function Calculator(){
   };
   
   console.log(user2); // toString -> {name: "karan"} return the object in string
+  console.log(user2 +" "+"rathore"); // concatenate valueOf() with string
   console.log(+user2); // valueOf -> 1000
   console.log(user2 + 500); // valueOf -> 1500
