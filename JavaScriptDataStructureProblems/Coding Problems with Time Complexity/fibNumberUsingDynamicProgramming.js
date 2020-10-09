@@ -40,6 +40,6 @@ count=0;
             //Left Iteration
                             fibByDP(3)=> fibByDP(2) and fibByDP(1)      // mem[n] stores fibByDP(2)
                                          fibByDP(2)=>fibByDP(1) and fibByDP(0)
-            // Right Iteration 
-            we don't need to do it becoz mem[n] already has fibByDP(2) then we can return mem[n] value =>3
- */                                        
+            // when we reach to root mem[n] i.e mem[4] it will return the saved result =>3
+            
+             */                                        
