@@ -51,4 +51,23 @@ function binarySearchbyrecursion(sortedArr,element,start,end){
 }
 
     console.log(binarySearchbyrecursion(arr,44,0,arr.length-1));
-    //Best/Avg/Worst case is same as above
+    //Best=> O(1)/Avg/Worst case is same O(logn) as above 
+
+   // Concepts of Master Thereom 
+
+    /* equals the number of subproblems (number of recursion splits)
+    b equals the relative subproblem size (input reduction per split)
+    f(n)equals the runtime outside of the recursionMaster Theorem
+    Runtime of recursion: O(𝑛^(log baseb ^a))
+    Overall algorithm runtime (time complexity)-three cases:
+     
+    Recursion does more work O(𝑛^(log baseb ^a))
+     Same work inside and outside of recursionO(𝑛^(log baseb ^a)*log n)
+     Non-recursive part does more workO(fn(n))
+    */
+
+// a = 1
+// b = 2 // in how many parts we are splitting
+// O(n^logb a) => O(n^log2 1) => O(n^0) => O(1) // for Item is in middle
+// Overall algorithm time complexity:
+// O(n^logb a * log n) => O(1 * log n) => O(log n)
