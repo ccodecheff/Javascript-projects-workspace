@@ -60,12 +60,17 @@ function unique(arr) {
   
     return uniqueArr;
   }
+
+  function uniqueByFilter(arr) {
+    return arr.filter((item, index) => !arr.includes(item, index+1 ));
+  }
   
   let strings = ["Hare", "Krishna", "Hare", "Krishna",
     "Krishna", "Krishna", "Hare", "Hare", ":-O"
   ];
   
   console.log( unique(strings) ); // Hare, Krishna, :-O
+  console.log(uniqueByFilter(strings));
 
 // prob 5 Write the code that converts it into an array of names and age and again wrap into object.
 let john = { name: "John", age: 25 };
