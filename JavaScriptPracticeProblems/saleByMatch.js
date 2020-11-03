@@ -1,25 +1,16 @@
 
-function saleByMatch(arr){
- let pair=0;
- console.log("original array:"+arr);
- for(let i=0;i<=arr.length;i++){
-console.log("outer loop running");
-console.log("i:"+arr[i]);
-    for( let j=i+1;j<arr.length;j++){
-        if(arr[i]==arr[j]){
-            pair++;  
-            console.log("count:"+pair);
-            console.log("running")
-            console.log(" outer removed at index:"+i+" "+arr.splice(i,1));
-            console.log("inner removed at index:"+j+" "+arr.splice(j,1));
-            console.log(arr);
-           
-        } 
+function saleByMatch(ar){
+let n = ar.length;
+    var res = 0;
+    console.log(ar.sort());
+    for(let i=0; i<n;i++){
+        if(ar[i] == ar[i+1]){
+            console.log("Matched element:"+ar[i] +"at index: "+i+"with element"+" "+ar[i+1]+"at index:"+(i+1));
+            i++;
+            res++;
+           }
     }
-    
-}
-        
-  return pair;
+return res;
  }
 
 

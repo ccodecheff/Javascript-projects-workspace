@@ -9,7 +9,8 @@ function fibByDP(n,mem){
    counter++;
    let result;
    // if mem[n] function is true it will return current state which will reduce the extra execution
-   if(mem[n]) return mem[n];  
+   if(mem[n]) 
+   return mem[n];  
 
    if(0===n ||1===n){
       result =1;
