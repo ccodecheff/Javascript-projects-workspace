@@ -13,23 +13,23 @@ const newNode= {value:value, next: null} // this node is appended at the last
 
     if(this.tail){
         this.tail.next = newNode; 
-        this.length++;
+       
     }
     this.tail = newNode; // if there is no tail node
 
     if(!this.head){ // for empty list
         this.head= newNode
-        this.length++;
+      
     }
-    
+    this.length++; 
 }
-    prepend(value){
-const newNode= { value: value, next: this.head}
+ prepend(value){
+    const newNode= { value: value, next: this.head}
       
             this.head= newNode;
         if(!this.tail){ // if the list is empty 
             this.tail = newNode;
-            this.length++;  
+             
         }
         this.length++;
     }
@@ -90,6 +90,7 @@ insertAfter(value,aftervalue){
     size(){
         return this.length;
     }
+
     toArray(){
     const elements= [];
     let curNode = this.head; // setting the pointer at head
@@ -118,6 +119,8 @@ insertAfter(value,aftervalue){
     }
 
     } // end of class 
+
+
 LinkedList1 = new LinkedList();
 LinkedList1.append(1);
 LinkedList1.append(1);
