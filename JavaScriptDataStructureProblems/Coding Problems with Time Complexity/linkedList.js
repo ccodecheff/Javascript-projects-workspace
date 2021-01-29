@@ -1,6 +1,6 @@
 // THis program is for linked list append, prepend , outputting and deletion
 
-class LinkedList{
+export class LinkedList{
  
     constructor(){
         this.head= null;
@@ -22,7 +22,24 @@ const newNode= {value:value, next: null} // this node is appended at the last
       
     }
     this.length++; 
-}
+    }
+    deleteHead(){
+     if(!this.head){
+         return null;
+     }   
+
+     const deletedItem= this.head;
+     
+     if(this.head.next){
+         this.head= this.head.next;
+     }
+     else{
+         this.head=null;
+         this.tail= null;
+     }
+     return deletedItem;
+    }
+    
  prepend(value){
     const newNode= { value: value, next: this.head}
       
