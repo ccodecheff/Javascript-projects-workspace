@@ -1,40 +1,38 @@
-import { LinkedList } from './linked-list.js';
-
-class Stack {
+class Queue {
   constructor() {
-    this.list = new LinkedList();
+    this.items = [];
   }
 
-  push(value) {
-    this.list.prepend(value);
+  enqueue(value) {
+    this.items.unshift(value);
   }
 
-  pop() {
-    return this.list.deleteHead();
+  dequeue() {
+    return this.items.pop();
   }
 
   isEmpty() {
-    return !this.list.head;
+    return this.items.length === 0;
   }
 
   toArray() {
-    return this.list.toArray();
+    return this.items.slice();
   }
 }
 
+const queue = new Queue();
 
-const stack = new Stack();
-stack.push('Cook dinner!');
-stack.push('Wash the dishes!');
-stack.push('Buy ingredients!');
+queue.enqueue('Max');
+queue.enqueue('Manu');
+queue.enqueue('Julie');
 
-console.log(stack.toArray());
+console.log(queue.toArray());
 
-console.log(stack.pop());
+console.log(queue.dequeue());
 
-console.log(stack.toArray());
+console.log(queue.toArray());
 
-console.log(stack.pop());
-console.log(stack.pop());
+console.log(queue.dequeue());
+console.log(queue.dequeue());
 
-console.log(stack.toArray());
+console.log(queue.toArray());
