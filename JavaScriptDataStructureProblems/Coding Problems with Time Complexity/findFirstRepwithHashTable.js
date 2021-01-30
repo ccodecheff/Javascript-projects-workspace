@@ -1,4 +1,4 @@
-const word = 'Logical mind';
+const word = 'Logicalaabbb mind';
 
 function findFirstRep(word){
 const table={};
