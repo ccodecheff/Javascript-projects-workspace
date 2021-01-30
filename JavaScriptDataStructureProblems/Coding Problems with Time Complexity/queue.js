@@ -9,6 +9,10 @@ class Queue{
     this.items.unshift(value);
     }
 
+    push(value) {
+        this.items.push(value);
+      }
+
     dequeue(){
         // removing the Top element
       return this.items.pop();
@@ -26,6 +30,7 @@ class Queue{
 const queue = new Queue();
 queue.enqueue("A");
 queue.enqueue(1);
+queue.push("B");
 queue.enqueue(2);
 queue.enqueue(3);
 queue.enqueue(4);
